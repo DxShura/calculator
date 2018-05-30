@@ -1,0 +1,51 @@
+#container{
+	width: 250px;
+	height: 350px;
+}
+
+#container div{
+	height: 20%;
+}
+
+#container div:first-child{
+	height: 45%;
+}
+
+#container div:nth-child(2){
+	height: 10%;
+}
+
+#container div:nth-child(2) button{
+	width: 47.6%;
+	height: 93%;
+	background-color: grey;
+	border: 0;
+	outline: 0;
+}
+
+button{
+	width: 23%;
+	height: 93%;
+	background-color: grey;
+	border: 0;
+	outline: 0;
+}
+input:first-child{
+	width: 93%;
+	height: 10%;
+	text-align: right;
+	padding: 10px;
+	font-size: 35px;
+	border: ;
+	color: #000;
+}
+
+input{
+	width: 93%;
+	height: 43%;
+	text-align: right;
+	padding: 10px;
+	font-size: 35px;
+	border: ;
+	color: #000;
+}
