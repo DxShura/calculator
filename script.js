@@ -1,4 +1,5 @@
 const display = document.getElementById('display');
+const display1 = document.getElementById('display1');
 const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operator');
 const equals = document.getElementById('equals');
@@ -11,41 +12,72 @@ function upDisplay(num){
 	num.addEventListener('click', function(){
 		calArray.push(num.innerHTML);
 		display.value = calArray.join('');
-		displayValue = display.value;
 	});
 }
 numbers.forEach(upDisplay);
 operators.forEach(upDisplay);
 
+clear.addEventListener('click', clearAll);
 function clearAll(){
-	clear.addEventListener('click', function(){
 		calArray = [];
 		display.value = "";
 		display1.value = "";
-	});
 }
-clearAll();
 
+dot.addEventListener('click', oneDot);
 function oneDot(){
-	dot.addEventListener('click', function(){
-		
 			calArray.push(dot.innerHTML);
 			display.value = calArray.join('');
-	});
 }
-oneDot();
 
+del.addEventListener('click', removeLast);
 function removeLast(){
-	del.addEventListener('click', function(){
-		calArray.pop();
+		removeItems(calArray, 1);
 		display.value = calArray.join('');
-	});
+		display1.value = "";
 }
-removeLast();
 
+equals.addEventListener('click', operate);
 function operate(){
-	equals.addEventListener('click', function(){
-		display1.value = '' +  eval(display.value);
-	});
+	let dotTest = display.value;
+	if(dotTest.includes('..') == true){
+		calArray = [];
+		display.value= "";
+		display1.value = "error";
+	}else{
+		display1.value = '' +  eval(display.value).toFixed(2);
+		display1.classList.remove('smallFontSize');
+	}
+
+	if(display1.value == "Infinity" || display1.value == "-Infinity"){
+		display1.classList.add('smallFontSize');
+		display1.value = "To infinity and beyond!";
+	}
+		
 }
-operate();
+
+function removeItems(rem, item){
+	for (let i = 0; i < item; i++){
+		rem.pop();
+	}
+}
+
+window.addEventListener('keydown', function(e){
+	const keyPress = document.querySelector(`button[data-key="${e.keyCode}"]`);
+	calArray.push(keyPress.innerHTML);
+	display.value = calArray.join('');
+	
+	if(e.keyCode == 13){
+		removeItems(calArray, 1);
+		display.value = calArray.join('');
+		operate();
+	} else if (e.keyCode == 46){
+		clearAll();
+	} else if (e.keyCode == 8){
+		removeItems(calArray, 2);
+		display.value = calArray.join('');
+		display1.value = "";
+	} else if(display1.value == "undefined"){
+		display1.value = "error";
+	}
+});

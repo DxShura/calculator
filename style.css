@@ -49,3 +49,7 @@ input{
 	border: ;
 	color: #000;
 }
+
+.smallFontSize{
+	font-size: 10px;
+}
