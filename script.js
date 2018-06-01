@@ -40,20 +40,37 @@ function removeLast(){
 equals.addEventListener('click', operate);
 function operate(){
 	let dotTest = display.value;
+	let removeDecimal;
+	let removeZero;
+
 	if(dotTest.includes('..') == true){
 		calArray = [];
 		display.value= "";
 		display1.value = "error";
 	}else{
-		display1.value = '' +  eval(display.value).toFixed(2);
+		removeDecimal = '' +  eval(display.value).toFixed(2);
+		removeZero = removeDecimal.slice(-1);
+	}
+
+	if(dotTest.includes('..') == true){
+		calArray = [];
+		display.value= "";
+		display1.value = "error";
+	}else if(removeDecimal.includes('.00') == true){
+		display1.value = removeDecimal.slice(0, -3);
+		display1.classList.remove('smallFontSize');
+	}else if(removeZero == "0"){
+		display1.value = removeDecimal.slice(0, -1);
+		display1.classList.remove('smallFontSize');
+	}else{
+		display1.value = removeDecimal;
 		display1.classList.remove('smallFontSize');
 	}
 
 	if(display1.value == "Infinity" || display1.value == "-Infinity"){
 		display1.classList.add('smallFontSize');
 		display1.value = "To infinity and beyond!";
-	}
-		
+	}	
 }
 
 function removeItems(rem, item){
