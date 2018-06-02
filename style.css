@@ -8,11 +8,8 @@ body{
 #container{
 	width: 250px;
 	height: 350px;
-	position: absolute;
-   	left: 50%;
- 	top: 30%; 
- 	margin-left: -150px;
- 	margin-top: -150px;
+   	margin: auto;
+   	padding-top: 100px;
 }
 
 #container div{
