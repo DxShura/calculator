@@ -83,6 +83,7 @@ window.addEventListener('keydown', function(e){
 	const keyPress = document.querySelector(`button[data-key="${e.keyCode}"]`);
 	calArray.push(keyPress.innerHTML);
 	display.value = calArray.join('');
+	keyPress.classList.add('activeButton');
 	
 	if(e.keyCode == 13){
 		removeItems(calArray, 1);
@@ -97,4 +98,19 @@ window.addEventListener('keydown', function(e){
 	} else if(display1.value == "undefined"){
 		display1.value = "error";
 	}
+
 });
+
+
+numbers.forEach(key => key.addEventListener('transitionend', removeTransition));
+operators.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+clear.addEventListener('transitionend', removeTransition);
+dot.addEventListener('transitionend', removeTransition);
+del.addEventListener('transitionend', removeTransition);
+equals.addEventListener('transitionend', removeTransition);
+
+function removeTransition (e){
+    if(e.propertyName !== 'background-color') return;
+    this.classList.remove('activeButton');
+  }

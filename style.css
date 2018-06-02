@@ -1,55 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+body{
+	background-color: grey;
+	font-family: 'noto Sans', sans-serif;
+}
+
 #container{
 	width: 250px;
 	height: 350px;
+	position: absolute;
+   	left: 50%;
+ 	top: 30%; 
+ 	margin-left: -150px;
+ 	margin-top: -150px;
 }
 
 #container div{
 	height: 20%;
 }
 
+h1, h2, p{
+	text-align: center;
+	margin-left: -2px;
+	margin-right: 14px;
+}
+
 #container div:first-child{
-	height: 45%;
+	height: 26%;
 }
 
-#container div:nth-child(2){
-	height: 10%;
+#container div:nth-child(4){
+	height: 13%;
 }
 
-#container div:nth-child(2) button{
+#container div:nth-child(4) button{
 	width: 47.6%;
-	height: 93%;
-	background-color: grey;
+	height: 100%;
+	background-color: #fff;
 	border: 0;
 	outline: 0;
+	transition: all .08s ease;
+}
+
+#container div:nth-child(4) button:hover{
+	background-color: grey;
+}
+#container div:nth-child(4) button:active{
+	background-color: #5a5a56;
 }
 
 button{
-	width: 23%;
-	height: 93%;
-	background-color: grey;
+	width: 23.8%;
+	height: 100%;
+	background-color: #fff;
 	border: 0;
 	outline: 0;
+	margin: -2px;
+	transition: all .08s ease;
+}
+button:hover {
+	background-color: grey;
+}
+button:active{
+	background-color: #5a5a56;
+}
+.activeButton{
+	background-color: #5a5a56 !important;
 }
 input:first-child{
-	width: 93%;
+	width: 87.2%;
 	height: 10%;
 	text-align: right;
 	padding: 10px;
-	font-size: 35px;
-	border: ;
+	font-size: 17px;
+	border: 0;
 	color: #000;
 }
 
 input{
-	width: 93%;
-	height: 43%;
+	width: 87.2%;
+	height: 52%;
 	text-align: right;
 	padding: 10px;
 	font-size: 35px;
-	border: ;
+	border: 0;
 	color: #000;
+	margin: -2px;
 }
 
 .smallFontSize{
-	font-size: 10px;
+	font-size: 15px;
 }
