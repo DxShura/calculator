@@ -82,6 +82,7 @@ function removeItems(rem, item){
 window.addEventListener('keydown', function(e){
 	const keyPress = document.querySelector(`button[data-key="${e.keyCode}"]`);
 	calArray.push(keyPress.innerHTML);
+	keyPress.focus();
 	display.value = calArray.join('');
 	keyPress.classList.add('activeButton');
 	
