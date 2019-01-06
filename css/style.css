@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #808080;
+  font-family: 'noto Sans', sans-serif;
+}
+
+#container {
+  width: 15.625rem;
+  height: 100%;
+  margin: auto;
+}
+
+#container div {
+  height: 4.375rem;
+}
+
+#container div:first-child {
+  height: 26%;
+}
+
+#container div:nth-child(3) {
+  height: 13%;
+}
+
+#container div:nth-child(3) button {
+  width: 50%;
+  height: 3.625rem;
+  background-color: #fff;
+  border: 0;
+  outline: 0;
+  -webkit-transition: all .08s ease;
+  transition: all .08s ease;
+}
+
+#container div:nth-child(3) button:hover {
+  background-color: grey;
+}
+
+#container div:nth-child(3) button:active {
+  background-color: #5a5a56;
+}
+
+#container h1, #container h2, #container p {
+  text-align: center;
+}
+
+#container button {
+  width: 25%;
+  height: 100%;
+  margin: -2px;
+  background-color: #fff;
+  border: 0;
+  outline: 0;
+  -webkit-transition: all .08s ease;
+  transition: all .08s ease;
+}
+
+#container button:hover {
+  background-color: grey;
+}
+
+#container button:active {
+  background-color: #5a5a56;
+}
+
+#container .activeButton {
+  background-color: #5a5a56 !important;
+}
+
+#container input {
+  width: 100%;
+  text-align: right;
+  padding: 0.625rem;
+  border: 0;
+  color: #000;
+  height: 52%;
+  font-size: 2.1875rem;
+  margin: -2px;
+}
+
+#container input:first-child {
+  height: 10%;
+  font-size: 1.0625rem;
+}
+
+#container .smallFontSize {
+  font-size: 0.9375rem;
+}
+
+@media screen and (min-width: 768px) {
+  #container {
+    padding-top: 5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

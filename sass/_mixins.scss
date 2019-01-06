@@ -1,0 +1,25 @@
+@function calculRem($size){
+    $remSize: $size/16px;
+    @return #{$remSize}rem;
+}
+
+@mixin button(){
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+    transition: all .08s ease;
+    &:hover{
+        background-color: grey;
+    }
+    &:active{
+        background-color: #5a5a56;
+    }
+}
+
+@mixin input(){
+    width: 100%;
+	text-align: right;
+	padding: calculRem(10px);
+	border: 0;
+	color: #000;
+}

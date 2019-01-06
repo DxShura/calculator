@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+body{
+	background-color: #808080;
+	font-family: 'noto Sans', sans-serif;
+}
+
+#container{
+	width: calculRem(250px);
+	height: 100%;
+   	margin: auto;
+	div{
+		height: calculRem(70px);
+		&:first-child{
+			height: 26%;
+		}
+		&:nth-child(3){
+			height: 13%;
+		}
+		&:nth-child(3) button{
+			width: 50%;
+			height: calculRem(58px);
+			@include button;
+		}
+	}
+	h1, h2, p{
+		text-align: center;
+	}
+	button{
+		width: 25%;
+		height: 100%;
+		margin: -2px;
+		@include button;
+	}
+	.activeButton{
+		background-color: #5a5a56 !important;
+	}
+	input{
+		@include input;
+		height: 52%;
+		font-size: calculRem(35px);
+		margin: -2px;
+		&:first-child{
+			height: 10%;
+			font-size: calculRem(17px);
+		}
+	}
+	.smallFontSize{
+		font-size: calculRem(15px);
+	}
+}

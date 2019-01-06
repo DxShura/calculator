@@ -1,48 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Calculator</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="container">
-            <h1>Calculator</h1>
-            <h2>Keyboard friendly</h2>
-            <div>
-                <input id="display" name="diplay" val="" readonly="" type="text">
-                <input id="display1" name="diplay1" val="" readonly="" type="text">
-            </div>
-        	<div>
-                <button id="delete" data-key="8">Del</button>
-                <button id="clear" data-key="46">AC</button>
-        	</div>
-        	<div>
-        		<button class="number" data-key="103">7</button>
-        		<button class="number" data-key="104">8</button>
-        		<button class="number" data-key="105">9</button>
-        		<button class="operator" data-key="111">/</button>
-        	</div>
-        	<div>
-        		<button class="number" data-key="100">4</button>
-        		<button class="number" data-key="101">5</button>
-        		<button class="number" data-key="102">6</button>
-        		<button class="operator" data-key="106">*</button>
-        	</div>
-        	<div>
-        		<button class="number" data-key="97">1</button>
-        		<button class="number" data-key="98">2</button>
-        		<button class="number" data-key="99">3</button>
-        		<button class="operator" data-key="109">-</button>
-        	</div>
-        	<div>
-        		<button class="dot" id="point" data-key="110">.</button>
-        		<button class="number" data-key="96">0</button>
-        		<button class="operator" data-key="107">+</button>
-        		<button id="equals" data-key="13">=</button>
-        	</div>
-            <p>Coded by <a href="https://github.com/DxShura" target="_blank">DxShura</a></p>
-        </div>
-        <script src="script.js"></script>
-    </body>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="container">
+		<h1>Calculatrice</h1>
+		<div>
+			<input id="display" name="diplay" val="" readonly="" type="text">
+			<input id="display1" name="diplay1" val="" readonly="" type="text">
+		</div>
+		<div>
+			<button id="delete" data-key="8">Del</button>
+			<button id="clear" data-key="46">AC</button>
+		</div>
+		<div>
+			<button class="number" data-key="103">7</button>
+			<button class="number" data-key="104">8</button>
+			<button class="number" data-key="105">9</button>
+			<button class="operator" data-key="111">/</button>
+		</div>
+		<div>
+			<button class="number" data-key="100">4</button>
+			<button class="number" data-key="101">5</button>
+			<button class="number" data-key="102">6</button>
+			<button class="operator" data-key="106">*</button>
+		</div>
+		<div>
+			<button class="number" data-key="97">1</button>
+			<button class="number" data-key="98">2</button>
+			<button class="number" data-key="99">3</button>
+			<button class="operator" data-key="109">-</button>
+		</div>
+		<div>
+			<button class="dot" id="point" data-key="110">.</button>
+			<button class="number" data-key="96">0</button>
+			<button class="operator" data-key="107">+</button>
+			<button id="equals" data-key="13">=</button>
+		</div>
+		<p>Créé par <a href="https://github.com/SHergibo/calculator" target="_blank">Sacha Hergibo</a></p>
+	</div>
+	
+	<script src="script.js"></script>
+</body>
 </html>
